@@ -21,3 +21,16 @@ BusinessDays::business_days_from_utc_time(2, Time.now.utc)
 
 - Hard coded to work with Brazilian times.
 - Can only add business days to a given date, not subtract.
+
+## Development
+
+To generate a new build:
+
+```
+gem build business-days.gemspec
+```
+
+To publish a new version:
+```
+gem push business-days-$VERSION.gem
+```
