@@ -8,7 +8,6 @@ class BusinessDays
     Holidays.between(Date.civil(Time.current.year,1,1), Date.civil(Time.current.year + 1, 12, 31), :br, :br).each do |holiday|
       @@holidays.push(holiday[:date])
     end
-    @@holidays.freeze
 
     def business_days_from_utc_time(days, time)
       # We count days based on Brasilia timezone
@@ -31,6 +30,12 @@ class BusinessDays
 
       weekend = [6, 7].include?(date.cwday)
       !(weekend || @@holidays.include?(date))
+    end
+
+    def add_holiday(date)
+      raise ArgumentError.new('Not a date') unless date.kind_of?(Date)
+
+      @@holidays.push(date)
     end
   end
 end
