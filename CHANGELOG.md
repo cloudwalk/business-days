@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.0.4](https://github.com/cloudwalkio/business-days/tree/v0.0.4) (2017-12-29)
+[Full Changelog](https://github.com/cloudwalkio/business-days/compare/v0.0.3...v0.0.4)
+
+**Implemented enhancements:**
+
+- Add bank holidays [\#3](https://github.com/cloudwalkio/business-days/issues/3)
+- Add informal holidays [\#2](https://github.com/cloudwalkio/business-days/issues/2)
+
 ## [v0.0.3](https://github.com/cloudwalkio/business-days/tree/v0.0.3) (2017-12-27)
 **Implemented enhancements:**
 
