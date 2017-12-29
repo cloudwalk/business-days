@@ -5,7 +5,7 @@ class BusinessDays
   class << self
     # Get holidays dates until next year
     @@holidays = []
-    Holidays.between(Date.civil(Time.current.year,1,1), Date.civil(Time.current.year + 1, 12, 31), :br, :br).each do |holiday|
+    Holidays.between(Date.civil(Time.current.year,1,1), Date.civil(Time.current.year + 1, 12, 31), :br, :informal).each do |holiday|
       @@holidays.push(holiday[:date])
     end
 
