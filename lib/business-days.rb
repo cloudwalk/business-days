@@ -9,7 +9,7 @@ class BusinessDaysSingleton
     @holidays = []
 
     # Setup holidays in an interval of 3 years
-    from = Time.current.year
+    from = Time.current.year - 1
     to = Time.current.year + 2
 
     # 1. Get all holidays in given years interval from Holidays gem
