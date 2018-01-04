@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.0.5](https://github.com/cloudwalkio/business-days/tree/v0.0.5) (2018-01-04)
+[Full Changelog](https://github.com/cloudwalkio/business-days/compare/v0.0.4...v0.0.5)
+
+**Implemented enhancements:**
+
+- Implement methods to return next and previous business days [\#4](https://github.com/cloudwalkio/business-days/issues/4)
+
 ## [v0.0.4](https://github.com/cloudwalkio/business-days/tree/v0.0.4) (2017-12-29)
 [Full Changelog](https://github.com/cloudwalkio/business-days/compare/v0.0.3...v0.0.4)
 
