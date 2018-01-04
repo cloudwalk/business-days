@@ -59,6 +59,35 @@ class BusinessDaysSingleton
     @holidays.push(date)
   end
 
+  # Returns the first business day after the given date.
+  #
+  # @param date [Date] the reference date.
+  # @return [Date] the first business day after the reference date.
+  def next(date)
+    raise ArgumentError.new('Not a date') unless date.kind_of?(Date)
+
+    date = date + 1.days
+    while !business_day?(date)
+      date = date + 1.days
+    end
+
+    date
+  end
+
+  # Returns the first business day before the given date.
+  #
+  # @param date [Date] the reference date.
+  # @return [Date] the first business day before the reference date.
+  def previous(date)
+    raise ArgumentError.new('Not a date') unless date.kind_of?(Date)
+
+    date = date - 1.days
+    while !business_day?(date)
+      date = date - 1.days
+    end
+
+    date
+  end
   private
 
   def latest_non_bank_businness_day(year)
