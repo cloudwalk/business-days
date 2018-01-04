@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'business-days'
-  s.version     = '0.0.4'
-  s.date        = '2017-12-29'
+  s.version     = '0.0.5'
+  s.date        = '2017-01-04'
   s.summary     = "Business Days"
   s.description = "Methods to check if a given date is a business days and to perform computations based on Business days."
   s.authors     = ["Allan Costa"]
@@ -13,4 +13,9 @@ Gem::Specification.new do |s|
   s.add_dependency "tzinfo", '= 1.2.2'
   s.add_dependency "tzinfo-data", '= 1.2017.2'
   s.add_dependency "holidays", '= 5.4.0'
+  s.metadata = {
+    "changelog_uri"     => "https://github.com/cloudwalkio/business-days/blob/master/CHANGELOG.md",
+    "documentation_uri" => "http://www.rubydoc.info/github/cloudwalkio/business-days",
+    "source_code_uri"   => "https://github.com/cloudwalkio/business-days"
+  }
 end
