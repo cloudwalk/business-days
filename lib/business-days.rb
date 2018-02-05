@@ -17,10 +17,9 @@ class BusinessDaysSingleton
       # Include holiday
       @holidays.push(holiday[:date])
 
-      # 2. If Carnaval, include the day before and after it (they are bank holidays)
+      # 2. If Carnaval, include the day before it (it's a bank holiday)
       if holiday[:name] == "Carnaval"
         @holidays.push(holiday[:date] - 1.day)
-        @holidays.push(holiday[:date] + 1.day)
       end
     end
 
