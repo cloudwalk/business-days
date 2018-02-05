@@ -50,7 +50,7 @@ class BusinessDaysSingleton
     date
   end
 
-  # Add the given date as a non-business day (for all commands after this).
+  # Check it the given date is a business day
   #
   # @param date [Date] the non-business date to be add.
   # @return [Boolean] true if the given date is a business day, false otherwise.
