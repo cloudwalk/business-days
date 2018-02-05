@@ -50,7 +50,7 @@ class BusinessDaysSingleton
     date
   end
 
-  # Check it the given date is a business day
+  # Check if the given date is a business day
   #
   # @param date [Date] the non-business date to be add.
   # @return [Boolean] true if the given date is a business day, false otherwise.
@@ -108,6 +108,47 @@ class BusinessDaysSingleton
     end
 
     d
+  end
+end
+
+class BusinessDaysInstance
+  def initialize(holidays)
+    @holidays = []
+
+    holidays.each do |holiday|
+      # Include holiday
+      @holidays.push(Date.parse(holiday))
+    end
+  end
+
+  # Check if the given date is a business day
+  #
+  # @param date [Date] the non-business date to be add.
+  # @return [Boolean] true if the given date is a business day, false otherwise.
+  def business_day?(date)
+    raise ArgumentError.new('Not a date') unless date.kind_of?(Date)
+
+    weekend = [6, 7].include?(date.cwday)
+    !(weekend || @holidays.include?(date))
+  end
+
+  # Count business days between two dates.
+  #
+  # @param from [Date] the starting date (inclusive)
+  # @param to [Date] the ending date (inclusive)
+
+  # @return [Integer] number of business days between the two dates
+  def business_days(from, to)
+    raise ArgumentError.new('Not a date: from') unless from.kind_of?(Date)
+    raise ArgumentError.new('Not a date: to') unless to.kind_of?(Date)
+    count = 0
+
+    while  from <= to
+      count +=1 if self.business_day?(from)
+      from = from + 1.day
+    end
+
+    count
   end
 end
 
