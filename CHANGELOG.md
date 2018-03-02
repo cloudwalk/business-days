@@ -1,5 +1,19 @@
 # Change Log
 
+## [v0.1.1](https://github.com/cloudwalkio/business-days/tree/v0.1.1) (2018-03-02)
+[Full Changelog](https://github.com/cloudwalkio/business-days/compare/v0.1.0...v0.1.1)
+
+**Implemented enhancements:**
+
+- Accept reference time from which the DST offset will be computed [\#7](https://github.com/cloudwalkio/business-days/issues/7)
+
+## [v0.1.0](https://github.com/cloudwalkio/business-days/tree/v0.1.0) (2018-02-05)
+[Full Changelog](https://github.com/cloudwalkio/business-days/compare/v0.0.5...v0.1.0)
+
+**Implemented enhancements:**
+
+- Add method to count business days between two dates [\#6](https://github.com/cloudwalkio/business-days/issues/6)
+
 ## [v0.0.5](https://github.com/cloudwalkio/business-days/tree/v0.0.5) (2018-01-04)
 [Full Changelog](https://github.com/cloudwalkio/business-days/compare/v0.0.4...v0.0.5)
 
