@@ -6,3 +6,9 @@ gem 'activesupport'
 gem 'holidays'
 gem 'tzinfo'
 gem 'tzinfo-data'
+
+
+group :test do
+  gem 'rspec'
+  gem 'rake'
+end
