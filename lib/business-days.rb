@@ -34,7 +34,7 @@ class BusinessDaysSingleton
   # @param days [Integer] how many business days to add to given time.
   # @param time [Time] the start time in UTC from which the business days will be added.
   # @param reference [Time] the reference time in UTC from which we will compute daylight saving.
-  # @return [Date] the computed business day
+  # @return [Time] the computed business day in UTC time (at midnight in Brasilia time)
   def business_days_from_utc_time(days, time, reference=nil)
     # Set reference to given time if no reference is passed
     if reference.nil?
@@ -56,7 +56,7 @@ class BusinessDaysSingleton
       end
     end
 
-    date
+    (date.to_time.utc.midnight - offset.to_i.hours)
   end
 
   # Check if the given date is a business day
