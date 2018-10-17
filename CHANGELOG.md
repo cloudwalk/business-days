@@ -1,5 +1,19 @@
 # Change Log
 
+## [v1.0.1](https://github.com/cloudwalkio/business-days/tree/v1.0.1) (2018-10-17)
+[Full Changelog](https://github.com/cloudwalkio/business-days/compare/v1.0.0...v1.0.1)
+
+**Implemented enhancements:**
+
+- Update tzinfo-data gem [\#10](https://github.com/cloudwalkio/business-days/issues/10)
+
+## [v1.0.0](https://github.com/cloudwalkio/business-days/tree/v1.0.0) (2018-06-08)
+[Full Changelog](https://github.com/cloudwalkio/business-days/compare/v0.1.1...v1.0.0)
+
+**Implemented enhancements:**
+
+- Return time object in business\_days\_from\_utc\_time method [\#8](https://github.com/cloudwalkio/business-days/issues/8)
+
 ## [v0.1.1](https://github.com/cloudwalkio/business-days/tree/v0.1.1) (2018-03-02)
 [Full Changelog](https://github.com/cloudwalkio/business-days/compare/v0.1.0...v0.1.1)
 
