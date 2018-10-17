@@ -5,7 +5,7 @@ ruby '2.4.1'
 gem 'activesupport'
 gem 'holidays'
 gem 'tzinfo'
-gem 'tzinfo-data'
+gem 'tzinfo-data', '~> 1'
 
 
 group :test do

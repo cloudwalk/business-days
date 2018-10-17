@@ -41,7 +41,7 @@ DEPENDENCIES
   rake
   rspec
   tzinfo
-  tzinfo-data
+  tzinfo-data (~> 1)
 
 RUBY VERSION
    ruby 2.4.1p111
