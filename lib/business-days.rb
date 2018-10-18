@@ -33,16 +33,10 @@ class BusinessDaysSingleton
   #
   # @param days [Integer] how many business days to add to given time.
   # @param time [Time] the start time in UTC from which the business days will be added.
-  # @param reference [Time] the reference time in UTC from which we will compute daylight saving.
   # @return [Time] the computed business day in UTC time (at midnight in Brasilia time)
-  def business_days_from_utc_time(days, time, reference=nil)
-    # Set reference to given time if no reference is passed
-    if reference.nil?
-      reference = time
-    end
-
+  def business_days_from_utc_time(days, time)
     # Get offset from reference data (based on Brasilia timezone)
-    offset = reference.in_time_zone('Brasilia').formatted_offset()
+    offset = time.in_time_zone('Brasilia').formatted_offset()
 
     # Get date from time in reference offset
     date = (time + offset.to_i.hours).to_date
@@ -50,7 +44,10 @@ class BusinessDaysSingleton
     # Add days until we reach the specified business days
     count = 0
     while count < days
-      date += 1.days
+      time += 24*60*60
+
+      offset = time.in_time_zone('Brasilia').formatted_offset()
+      date = (time + offset.to_i.hours).to_date
       if business_day?(date)
         count +=1
       end
