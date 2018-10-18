@@ -1,5 +1,12 @@
 # Change Log
 
+## [v2.0.0](https://github.com/cloudwalkio/business-days/tree/v2.0.0) (2018-10-18)
+[Full Changelog](https://github.com/cloudwalkio/business-days/compare/v1.0.1...v2.0.0)
+
+**Implemented enhancements:**
+
+- Simplify business\_days\_midnight interface by removing the reference parameter [\#11](https://github.com/cloudwalkio/business-days/issues/11)
+
 ## [v1.0.1](https://github.com/cloudwalkio/business-days/tree/v1.0.1) (2018-10-17)
 [Full Changelog](https://github.com/cloudwalkio/business-days/compare/v1.0.0...v1.0.1)
 
