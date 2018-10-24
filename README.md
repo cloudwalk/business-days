@@ -34,3 +34,7 @@ To publish a new version:
 ```
 gem push business-days-$VERSION.gem
 ```
+
+## License
+
+This project is released under the [MIT License](https://opensource.org/licenses/MIT).
