@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'business-days'
-  s.version     = '3.1.0'
+  s.version     = '3.1.1'
   s.date        = '2019-12-12'
   s.summary     = "Business Days"
   s.description = "Methods to check if a given date is a business days and to perform computations based on Business days."
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://rubygems.org/gems/business-days'
   s.license     = 'MIT'
   s.add_dependency "activesupport", '~> 6.0'
-  s.add_dependency "tzinfo", '= 1.2.5'
+  s.add_dependency "tzinfo", '= 1.2.7'
   s.add_dependency "tzinfo-data", '~> 1'
   s.add_dependency "holidays", '~> 7.1'
   s.metadata = {
