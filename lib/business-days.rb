@@ -76,6 +76,15 @@ class BusinessDaysSingleton
     @holidays.push(date)
   end
 
+  # Remove given date from holidays list for all commands after this.
+  #
+  # @param date [Date] the non-holiday date to be add.
+  def remove_holiday(date)
+    raise ArgumentError.new('Not a date') unless date.kind_of?(Date)
+
+    @holidays.delete(date)
+  end
+
   # Returns the first business day after the given date.
   #
   # @param date [Date] the reference date.
