@@ -25,7 +25,7 @@ class BusinessDaysSingleton
 
     # 3. Add the latest business day in each year (it's a bank holiday)
     (from..to).each do |year|
-      @holidays.push(latest_non_bank_businness_day(year))
+      @holidays.push(latest_non_bank_business_day(year))
     end
   end
 
@@ -126,7 +126,7 @@ class BusinessDaysSingleton
 
   private
 
-  def latest_non_bank_businness_day(year)
+  def latest_non_bank_business_day(year)
     d = Date.civil(year, 12, 31)
     while !self.business_day?(d)
       d = d - 1.day
