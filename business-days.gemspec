@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'business-days'
-  s.version     = '3.1.1'
-  s.date        = '2019-12-12'
+  s.version     = '3.1.2'
+  s.date        = '2020-01-04'
   s.summary     = "Business Days"
   s.description = "Methods to check if a given date is a business days and to perform computations based on Business days."
   s.authors     = ["Allan Costa"]
