@@ -85,6 +85,15 @@ class BusinessDaysSingleton
     @holidays.delete(date)
   end
 
+  # Remove latest holiday for each year
+  def remove_latest_non_bank_business_days
+    years = Set.new(@holidays.map { |d| d.year })
+    years.each do |year|
+      max_date = @holidays.select { |d| d.year == year }.max
+      self.remove_holiday(max_date)
+    end
+  end
+
   # Returns the first business day after the given date.
   #
   # @param date [Date] the reference date.
@@ -114,6 +123,7 @@ class BusinessDaysSingleton
 
     date
   end
+
   private
 
   def latest_non_bank_businness_day(year)

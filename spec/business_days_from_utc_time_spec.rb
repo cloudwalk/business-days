@@ -63,4 +63,21 @@ describe 'test' do
 
     expect(BusinessDays.business_days_from_utc_time(1, time)).to eql(Time.parse('2018-11-06T02:00:00Z'))
   end
+
+  it '2021-12-30 plus 1 business days should be 2022-01-03' do
+    # This date, in Brasilia time, will be 2021-12-30 (-03:00)
+    time = Time.parse('2021-12-30T15:00:00Z')
+
+    expect(BusinessDays.business_days_from_utc_time(1, time)).to eql(Time.parse('2022-01-03T03:00:00Z'))
+  end
+
+  it '2020-12-30 plus 1 business days should be 2020-12-31 if ignoring latest day of the year' do
+    # This date, in Brasilia time, will be 2020-12-30 (-03:00)
+    time = Time.parse('2020-12-30T15:00:00Z')
+
+    # Remove latest bank holiday
+    BusinessDays.remove_latest_non_bank_business_days
+
+    expect(BusinessDays.business_days_from_utc_time(1, time)).to eql(Time.parse('2020-12-31T03:00:00Z'))
+  end
 end
