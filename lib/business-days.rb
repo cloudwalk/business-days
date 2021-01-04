@@ -90,7 +90,7 @@ class BusinessDaysSingleton
     years = Set.new(@holidays.map { |d| d.year })
     years.each do |year|
       max_date = @holidays.select { |d| d.year == year }.max
-      self.remove_holiday(max_date)
+      self.remove_holiday(max_date) if max_date.strftime('%m%d') >= "1229"
     end
   end
 
