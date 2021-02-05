@@ -80,4 +80,8 @@ describe 'test' do
 
     expect(BusinessDays.business_days_from_utc_time(1, time)).to eql(Time.parse('2020-12-31T03:00:00Z'))
   end
+
+  it 'should have business days between 2021-01-01 and 2021-03-01' do
+    expect(BusinessDays.business_days(Date.parse('2021-01-01'), Date.parse('2021-03-01'))).to eql(39)
+  end
 end

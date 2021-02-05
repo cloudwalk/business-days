@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    business-days (3.1.2)
+    business-days (3.1.4)
       activesupport (~> 6.0)
       holidays (~> 7.1)
       tzinfo (= 1.2.7)
@@ -16,12 +16,12 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
-    concurrent-ruby (1.1.7)
+    concurrent-ruby (1.1.8)
     diff-lcs (1.4.4)
     holidays (7.1.0)
-    i18n (1.8.7)
+    i18n (1.8.8)
       concurrent-ruby (~> 1.0)
-    minitest (5.14.2)
+    minitest (5.14.3)
     rake (13.0.3)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -39,7 +39,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2020.6)
+    tzinfo-data (1.2021.1)
       tzinfo (>= 1.0.0)
     zeitwerk (2.4.2)
 

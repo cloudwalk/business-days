@@ -56,6 +56,25 @@ class BusinessDaysSingleton
     (date.to_time.utc.midnight - offset.to_i.hours)
   end
 
+  # Count business days between two dates.
+  #
+  # @param from [Date] the starting date (inclusive)
+  # @param to [Date] the ending date (inclusive)
+
+  # @return [Integer] number of business days between the two dates
+  def business_days(from, to)
+    raise ArgumentError.new('Not a date: from') unless from.kind_of?(Date)
+    raise ArgumentError.new('Not a date: to') unless to.kind_of?(Date)
+    count = 0
+
+    while  from <= to
+      count +=1 if self.business_day?(from)
+      from = from + 1.day
+    end
+
+    count
+  end
+
   # Check if the given date is a business day
   #
   # @param date [Date] the non-business date to be add.
