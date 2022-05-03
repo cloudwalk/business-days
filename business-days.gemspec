@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.add_dependency "activesupport", '~> 6.0'
   s.add_dependency "tzinfo", '~> 2.0'
   s.add_dependency "tzinfo-data", '~> 1'
-  s.add_dependency "holidays", '~> 7.1'
+  s.add_dependency "holidays", '~> 8.5'
   s.metadata = {
     "changelog_uri"     => "https://github.com/cloudwalkio/business-days/blob/master/CHANGELOG.md",
     "documentation_uri" => "http://www.rubydoc.info/github/cloudwalkio/business-days",
