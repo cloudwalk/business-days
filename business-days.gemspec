@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'business-days'
-  s.version     = '3.1.5'
+  s.version     = '4.0.0'
   s.date        = '2021-02-04'
   s.summary     = "Business Days"
   s.description = "Methods to check if a given date is a business days and to perform computations based on Business days."
