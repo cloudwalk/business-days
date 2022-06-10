@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.files       = ["lib/business-days.rb"]
   s.homepage    = 'http://rubygems.org/gems/business-days'
   s.license     = 'MIT'
-  s.add_dependency "activesupport", '~> 6.0'
+  s.add_dependency "activesupport", '~> 7.0'
   s.add_dependency "tzinfo", '~> 2.0'
   s.add_dependency "tzinfo-data", '~> 1'
   s.add_dependency "holidays", '~> 8.5'
