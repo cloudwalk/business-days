@@ -24,9 +24,9 @@ class BusinessDaysSingleton
     end
 
     # 3. Add the latest business day in each year (it's a bank holiday)
-    (from..to).each do |year|
-      @holidays.push(latest_non_bank_business_day(year))
-    end
+    # (from..to).each do |year|
+    #   @holidays.push(latest_non_bank_business_day(year))
+    # end
   end
 
   # Compute the date obtained by adding the given amount of business days to the given time.
