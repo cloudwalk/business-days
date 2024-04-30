@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    business-days (4.1.0)
-      activesupport (>= 6.0, < 7.1)
+    business-days (4.2.0)
+      activesupport
       holidays (~> 8.5)
       tzinfo (~> 2.0)
       tzinfo-data (~> 1)
@@ -52,4 +52,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.2.9
+   2.4.4
